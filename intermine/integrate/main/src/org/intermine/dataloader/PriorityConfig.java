@@ -53,6 +53,7 @@ public class PriorityConfig
             }
         }
         seenSources.remove("*");
+        seenSources.remove("<>");
         Set<String> extraSources = new HashSet<String>();
         for (String seenSource : seenSources) {
             if (!allSources.contains(seenSource)) {

@@ -147,6 +147,11 @@ public class SourcePriorityComparator implements Comparator<InterMineObject>
                         return 0;
                     }
                 }
+
+                if (srcs.indexOf( "<>" ) != -1) {
+                    return -1;
+                }
+
                 int source1Priority = srcs.indexOf(source1.getName());
                 if (source1Priority == -1) {
                     source1Priority = srcs.indexOf("*");
